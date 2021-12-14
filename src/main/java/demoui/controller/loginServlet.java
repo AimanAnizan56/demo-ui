@@ -41,8 +41,7 @@ public class loginServlet extends HttpServlet {
 
             ResultSet result = prepStmt.executeQuery();
 
-
-            if (result.getRow() == 1) {
+            if (result.next() && result.getRow() == 1) {
                 String currentUsername = result.getString(1);
 
                 out.println("<h1>Hello " + currentUsername + " </h1>");
