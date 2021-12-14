@@ -31,16 +31,19 @@ public class loginServlet extends HttpServlet {
 
             ResultSet result = prepStmt.executeQuery();
 
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            out.println("<html><body>");
+
             if (result.getRow() == 1) {
                 String currentUsername = result.getString(1);
 
-                response.setContentType("text/html");
-                PrintWriter out = response.getWriter();
-
-                out.println("<html><body>");
                 out.println("<h1>Hello " + currentUsername + " </h1>");
-                out.println("</body></html>");
+            } else {
+                out.println("<h1>Username or password false</h1>");
             }
+
+            out.println("</body></html>");
         } catch (SQLException e) {
             e.printStackTrace();
         }
