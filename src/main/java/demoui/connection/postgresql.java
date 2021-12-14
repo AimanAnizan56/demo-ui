@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class postgresql {
+    // reference - https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java
     private final String postgresql_driver = "org.postgresql.Driver";
     private URI dbUri = null;
 
