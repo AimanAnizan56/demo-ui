@@ -43,12 +43,12 @@
                                         session.setAttribute("action", "login");
                                     %>
                                     <div class="form-group mb-3">
-                                        <label class="label" for="name">Username</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Username" autocomplete="off" required>
+                                        <label class="label" for="username">Username</label>
+                                        <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" required>
                                     </div>
                                     <div class="form-group mb-3">
                                         <label class="label" for="password">Password</label>
-                                        <input id="password" type="password" class="form-control" placeholder="Password" required>
+                                        <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
