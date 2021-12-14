@@ -37,7 +37,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <form action="" class="signin-form">
+                                <form action="loginServlet" method="post" class="signin-form">
                                     <%
                                         session = request.getSession();
                                         session.setAttribute("action", "login");
