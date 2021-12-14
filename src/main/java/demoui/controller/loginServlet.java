@@ -27,6 +27,9 @@ public class loginServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<html><body>");
 
+            out.println("Username input: " + username + "<br>");
+            out.println("Password input: " + password + "<br>");
+
             Connection conn = postgresql.getConnection();
             if(conn == null) {
                 out.println("<h1>Cannot establish connection</h1>");
