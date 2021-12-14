@@ -34,4 +34,14 @@ public class postgresql {
         }
         return conn;
     }
+
+    public static void closeConnection() {
+        try {
+            if(!conn.isClosed()) {
+                conn.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

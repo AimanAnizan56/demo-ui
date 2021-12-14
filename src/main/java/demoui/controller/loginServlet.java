@@ -21,7 +21,6 @@ public class loginServlet extends HttpServlet {
         String username = (String) request.getParameter("username");
         String password = (String) request.getParameter("password");
 
-
         try {
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
@@ -55,5 +54,6 @@ public class loginServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        postgresql.closeConnection();
     }
 }
