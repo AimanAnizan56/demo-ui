@@ -45,6 +45,7 @@ public class loginServlet extends HttpServlet {
                 out.println("<h1>Hello " + currentUsername + " </h1>");
             } else {
                 out.println("<h1>Username or password false</h1>");
+                out.println("<div>Table row: " + result.getRow() + "</div>");
             }
 
             out.println("</body></html>");
