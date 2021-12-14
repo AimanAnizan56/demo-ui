@@ -16,7 +16,7 @@ public class postgresql {
             Class.forName(postgresql_driver);
             conn = DriverManager.getConnection(postgresql_uri, postgresql_user, postgresql_password);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
